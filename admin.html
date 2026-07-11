@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-panel">
+
+<h1>MulltiBox DataBase</h1>
+
+<input type="text" id="movieTitle" placeholder="Movie Title">
+
+<input type="text" id="movieGenre" placeholder="Genre">
+
+<input type="text" id="movieYear" placeholder="Release Year">
+
+<input type="text" id="movieImage" placeholder="Poster Image URL">
+
+<input type="text" id="videoUrl" placeholder="Enter video URL">
+
+<textarea id="movieDesc" placeholder="Movie Description"></textarea>
+
+<select id="movieCategory">
+    <option value="Movies">Movies</option>
+    <option value="Trending">Trending</option>
+    <option value="Recommended">Recommended</option>
+    <option value="Anime">Anime</option>
+    <option value="Series">Series</option>
+</select>
+
+
+<button onclick="addMovie()">Add Movie</button>
+
+
+<h2>Added Movies</h2>
+
+<div id="movieList"></div>
+
+
+</div>
+
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>
