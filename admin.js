@@ -8,7 +8,55 @@ import {
     doc
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
+const cloudName = "liqcadtf";
+const uploadPreset = "mulltibox_uploads";
 
+
+async function uploadVideo(){
+
+    const file =
+    document.getElementById("videoFile").files[0];
+
+
+    if(!file){
+
+        alert("Select a video first");
+        return null;
+
+    }
+
+
+    document.getElementById("uploadStatus").innerHTML =
+    "Uploading video...";
+
+
+    const formData = new FormData();
+
+    formData.append("file", file);
+
+    formData.append("upload_preset", uploadPreset);
+
+
+
+    const response = await fetch(
+        `https://api.cloudinary.com/v1_1/${cloudName}/video/upload`,
+        {
+            method:"POST",
+            body:formData
+        }
+    );
+
+
+    const data = await response.json();
+
+
+    document.getElementById("uploadStatus").innerHTML =
+    "Upload complete";
+
+
+    return data.secure_url;
+
+}
 // ADD MOVIE
 
 async function addMovie(){
@@ -25,7 +73,7 @@ async function addMovie(){
 
         image: document.getElementById("movieImage").value,
 
-        videoUrl: document.getElementById("videoUrl").value,
+        videoUrl: await uploadVideo(),
 
         desc: document.getElementById("movieDesc").value,
 
