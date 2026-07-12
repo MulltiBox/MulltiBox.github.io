@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>MulltiHub - Learn Grow Earn</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    background:
+    radial-gradient(circle at top,#1f1f1f,transparent 35%),
+    linear-gradient(180deg,#050505,#0b0b0b);
+
+    color:white;
+    overflow-x:hidden;
+
+}
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+
+.nav{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    z-index:999;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 6%;
+
+    background:rgba(5,5,5,.85);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.logo{
+
+    font-size:28px;
+    font-weight:800;
+
+    color:#ffffff;
+
+}
+
+
+.logo span{
+
+    color:#e50914;
+
+}
+
+
+
+.nav a{
+
+    color:#ddd;
+
+    text-decoration:none;
+
+    margin-left:25px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.nav a:hover{
+
+    color:#e50914;
+
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero{
+
+    min-height:100vh;
+
+    padding:120px 20px 70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+
+}
+
+/* NEW MULLTIBOX BUTTON */
+
+
+.mulltibox-btn{
+
+
+display:inline-block;
+
+margin-bottom:25px;
+
+padding:18px 45px;
+
+border-radius:50px;
+
+
+background:
+
+#e53e3e;
+);
+
+
+color:white;
+
+text-decoration:none;
+
+font-weight:800;
+
+font-size:20px;
+
+
+box-shadow:
+
+0 4px 14px 0 rgba(229, 62, 62, 0.4);
+
+transition:.3s;
+
+
+}
+
+
+
+.mulltibox-btn:hover{
+
+
+transform:translateY(-6px) scale(1.03);
+
+
+}
+
+
+
+
+.profile-pic{
+
+    width:150px;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+
+    border:4px solid #e50914;
+
+
+    box-shadow:
+
+    0 0 25px rgba(229,9,20,.5);
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.hero h1{
+
+    font-size:60px;
+
+    font-weight:800;
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #ffffff,
+    #e50914
+    );
+
+
+    background-clip:text;
+
+    color:transparent;
+
+
+}
+
+
+
+.hero p{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    color:#b5b5b5;
+
+    line-height:1.7;
+
+
+}
+
+
+
+/* =========================
+ SEARCH
+========================= */
+
+
+.search-container{
+
+    width:100%;
+
+    max-width:450px;
+
+    position:relative;
+
+    margin-bottom:35px;
+
+}
+
+
+
+#searchInput{
+
+
+    width:100%;
+
+    padding:18px 25px;
+
+
+    border-radius:50px;
+
+
+    background:#111;
+
+
+    border:1px solid #333;
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    outline:none;
+
+
+}
+
+
+
+#searchInput:focus{
+
+
+    border-color:#e50914;
+
+
+    box-shadow:
+
+    0 0 20px rgba(229,9,20,.4);
+
+
+}
+
+
+
+#searchInput::placeholder{
+
+    color:#777;
+
+}
+
+
+
+#searchResults{
+
+
+    position:absolute;
+
+    top:70px;
+
+    width:100%;
+
+
+    background:#111;
+
+
+    border-radius:15px;
+
+
+    overflow:hidden;
+
+
+    border:1px solid #333;
+
+
+    z-index:100;
+
+
+}
+
+
+
+#searchResults a{
+
+
+    display:block;
+
+
+    padding:14px;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+}
+
+
+
+#searchResults a:hover{
+
+
+    background:#e50914;
+
+
+}
+
+
+
+
+/* =========================
+ BUTTON
+========================= */
+
+
+.btn{
+
+
+    display:inline-block;
+
+
+    padding:16px 35px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    black
+    ;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-weight:700;
+
+    margin-top:20px;
+
+
+    box-shadow:
+
+    0 0 25px rgba(229,9,20,.5);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.btn:hover{
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+/* =========================
+ CARDS
+========================= */
+
+
+.section{
+
+
+    padding:70px 6%;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(260px,1fr));
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+.card{
+
+
+    background:#111;
+
+
+    border:1px solid #222;
+
+
+    padding:30px;
+
+
+    border-radius:20px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.card:hover{
+
+
+    transform:translateY(-8px);
+
+
+    border-color:#e50914;
+
+
+    box-shadow:
+
+    0 0 30px rgba(229,9,20,.25);
+
+
+}
+
+
+
+.card h3{
+
+
+    color:#e50914;
+
+
+    font-size:24px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.card p{
+
+
+    color:#aaa;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+/* END OF PART 1 */
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<div class="nav">
+
+
+<div class="logo">
+
+📚 <span>Mullti</span>Hub
+
+</div>
+
+
+
+<div>
+
+<a href="books.html">Books</a>
+
+<a href="courses.html">Courses</a>
+
+<a href="anime.html">Anime</a>
+
+<a href="contact.html">Contact</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- HERO SECTION -->
+
+
+<section class="hero">
+
+
+
+
+<!-- MULLTIBOX ACCESS BUTTON -->
+
+
+<a href="" class="mulltibox-btn">
+
+🚀 Explore MulltiBox
+
+</a>
+
+
+
+<div class="search-container">
+
+
+<input 
+type="text"
+id="searchInput"
+placeholder="🔍 Search books, PDFs, anime, courses...">
+
+
+<div id="searchResults"></div>
+
+
+</div>
+
+
+
+<img src="myphoto.png" class="profile-pic">
+
+
+
+<h1>
+
+Learn. Grow. Earn.
+
+</h1>
+
+
+
+<p>
+
+Your Ultimate Learning & Entertainment Hub
+
+<br>
+
+Books • PDFs • Courses • Anime • AI Assistant
+
+</p>
+
+
+
+<div>
+
+
+<a href="#resources" class="btn">
+
+🌐 Explore Resources
+
+</a>
+
+
+</div>
+
+
+
+</section>
+
+<!-- =========================
+     RESOURCE CATEGORIES
+========================= -->
+
+
+<section class="section" id="resources">
+
+
+<a href="books.html" style="text-decoration:none;color:inherit;">
+
+<div class="card">
+
+
+<h3>📚 Books</h3>
+
+
+<p>
+Download study books, notes and learning material for free.
+</p>
+
+
+</div>
+
+</a>
+
+
+
+
+<a href="anime.html" style="text-decoration:none;color:inherit;">
+
+
+<div class="card">
+
+
+<h3>🎌 Anime</h3>
+
+
+<p>
+Explore anime, manga and famous stories in an easy format.
+</p>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+<a href="stories.html" style="text-decoration:none;color:inherit;">
+
+
+<div class="card">
+
+
+<h3>📖 Stories</h3>
+
+
+<p>
+Read informative, famous and entertaining stories.
+</p>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+<a href="courses.html" style="text-decoration:none;color:inherit;">
+
+
+<div class="card">
+
+
+<h3>🎓 Courses</h3>
+
+
+<p>
+Learn practical skills and improve your knowledge.
+</p>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+<a href="mulltibot.html" style="text-decoration:none;color:inherit;">
+
+
+<div class="card">
+
+
+<h3>🤖 MulltiBot</h3>
+
+
+<p>
+Ask AI assistant and get help anytime.
+</p>
+
+
+</div>
+
+
+</a>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+       STATS SECTION
+========================= -->
+
+
+<section class="stats-section">
+
+
+<h2>
+
+Why MulltiHub?
+
+</h2>
+
+
+
+<div class="section">
+
+
+
+<div class="card">
+
+
+<h3>📚 5000+</h3>
+
+
+<p>
+Learning Resources
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>📄 2000+</h3>
+
+
+<p>
+PDF Materials
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>🎓 500+</h3>
+
+
+<p>
+Courses & Notes
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>🤖 24/7</h3>
+
+
+<p>
+AI Assistant Support
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+       WHAT WE PROVIDE
+========================= -->
+
+
+<section class="provide-section">
+
+
+<div class="card provide-card">
+
+
+
+<h2>
+
+⭐ What We Provide
+
+</h2>
+
+
+
+
+
+<p>
+⭐ CA students can access courses, notes and summarized concepts for better preparation.
+</p>
+
+
+
+<p>
+⭐ Free stories, informative books and famous reading material.
+</p>
+
+
+
+<p>
+⭐ Online courses to build practical skills step by step.
+</p>
+
+
+
+<p>
+⭐ Exam notes designed for faster revision.
+</p>
+
+
+
+<p>
+⭐ Guidance for students who want to learn online earning skills.
+</p>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<style>
+
+
+/* =========================
+ EXTRA SECTION CSS
+========================= */
+
+
+.stats-section{
+
+    padding:70px 6%;
+
+    text-align:center;
+
+}
+
+
+
+.stats-section h2{
+
+
+    font-size:38px;
+
+
+    margin-bottom:35px;
+
+
+    color:#e50914;
+
+
+}
+
+
+
+
+
+.provide-section{
+
+
+    padding:70px 8%;
+
+
+}
+
+
+
+
+
+.provide-card{
+
+
+    max-width:900px;
+
+
+    margin:auto;
+
+
+}
+
+
+
+
+
+.provide-card h2{
+
+
+    text-align:center;
+
+
+    color:#e50914;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+.provide-card p{
+
+
+    margin-bottom:20px;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+</style>
+
+<!-- =========================
+        FOOTER
+========================= -->
+
+
+<footer>
+
+
+<h2>
+
+MulltiHub
+
+</h2>
+
+
+<p>
+
+© 2026 MulltiHub | Built for Learning & Growth
+
+</p>
+
+
+<div class="footer-links">
+
+
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+
+
+<a href="about.html">
+About
+</a>
+
+
+<a href="contact.html">
+Contact
+</a>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+<!-- =========================
+     FLOATING MULLTIBOT
+========================= -->
+
+
+<a href="mulltibot.html" class="mulltibot-button">
+
+🤖 MulltiBot
+
+</a>
+
+
+
+
+
+
+<style>
+
+
+/* =========================
+ FOOTER
+========================= */
+
+
+footer{
+
+
+    background:#080808;
+
+
+    border-top:1px solid #222;
+
+
+    padding:40px 20px;
+
+
+    text-align:center;
+
+
+    color:#aaa;
+
+
+}
+
+
+
+
+footer h2{
+
+
+    color:#e50914;
+
+
+    font-size:32px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+.footer-links{
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+.footer-links a{
+
+
+    color:#aaa;
+
+
+    text-decoration:none;
+
+
+    margin:0 12px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.footer-links a:hover{
+
+
+    color:#e50914;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+ FLOATING BUTTON
+========================= */
+
+
+.mulltibot-button{
+
+
+    position:fixed;
+
+
+    right:25px;
+
+
+    bottom:30px;
+
+
+    z-index:9999;
+
+
+
+    background:#111;
+
+
+    color:white;
+
+
+
+    padding:12px 22px;
+
+
+    border-radius:50px;
+
+
+
+    border:1px solid #e50914;
+
+
+
+    text-decoration:none;
+
+
+    font-weight:700;
+
+
+
+    box-shadow:
+
+    0 0 20px rgba(229,9,20,.5);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.mulltibot-button:hover{
+
+
+    transform:translateY(-5px);
+
+
+    background:#e50914;
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+ MOBILE
+========================= */
+
+
+@media(max-width:768px){
+
+
+
+.nav{
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+    padding:15px;
+
+
+}
+
+
+
+.nav a{
+
+
+    margin:0 8px;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.logo{
+
+
+    font-size:22px;
+
+
+}
+
+
+
+.hero h1{
+
+
+    font-size:38px;
+
+
+}
+
+
+
+.hero p{
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.profile-pic{
+
+
+    width:120px;
+
+
+    height:120px;
+
+
+}
+
+
+
+.section{
+
+
+    grid-template-columns:1fr;
+
+
+    padding:40px 20px;
+
+
+}
+
+
+
+.card{
+
+
+    padding:25px;
+
+
+}
+
+
+
+.footer-links a{
+
+
+    display:block;
+
+
+    margin:15px;
+
+
+}
+
+
+
+}
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<!-- =========================
+        SEARCH SYSTEM
+========================= -->
+
+
+<script>
+
+
+const data=[
+
+
+{name:"Books",url:"books.html"},
+
+
+{name:"Anime",url:"anime.html"},
+
+
+{name:"Stories",url:"stories.html"},
+
+
+{name:"Dragonball",url:"dragonball.html"},
+
+
+{name:"Contact",url:"contact.html"},
+
+
+{name:"MulltiBot",url:"mulltibot.html"},
+
+
+{name:"AI Assistant",url:"mulltibot.html"},
+
+
+{name:"Earn Development",url:"earningdevelopment.html"},
+
+
+{name:"Business PDF",url:"buisness(i2b).pdf"},
+
+
+{name:"Dragonball Z chapter 1 to 6 PDF",url:"dragonballz1-6.pdf"},
+
+
+{name:"Dragonball Z chapter 6 to 25 PDF",url:"dragonballz6-25.pdf"},
+
+
+{name:"Genie English PDF",url:"genieenglish.pdf"},
+
+
+{name:"Genie Urdu PDF",url:"genieurdu.pdf"},
+
+
+{name:"FAR 1 Pass Papers PDF",url:"far1passpapers.pdf"}
+
+
+];
+
+
+
+
+
+const input=document.getElementById("searchInput");
+
+
+const results=document.getElementById("searchResults");
+
+
+
+
+
+input.addEventListener("keyup",()=>{
+
+
+let value=input.value.toLowerCase();
+
+
+
+results.innerHTML="";
+
+
+
+if(value===""){
+
+return;
+
+}
+
+
+
+data.filter(item=>
+
+
+item.name.toLowerCase().includes(value)
+
+
+)
+
+.forEach(item=>{
+
+
+results.innerHTML +=
+
+
+`
+<a href="${item.url}">
+${item.name}
+</a>
+`;
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
