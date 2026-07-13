@@ -79,9 +79,9 @@ function showSuggestions(){
         },
 
         {
-            name:"Anime",
+            name:"Anime/Series",
             icon:"🌸",
-            page:"anime.html"
+            page:"series.html"
         },
 
         {
@@ -91,7 +91,7 @@ function showSuggestions(){
         },
 
         {
-            name:"Series",
+            name:"Anime/Series",
             icon:"📺",
             page:"series.html"
         },
