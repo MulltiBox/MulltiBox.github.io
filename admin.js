@@ -401,84 +401,6 @@ alert(
 
 
 
-
-
-
-
-
-
-// ============================
-// ADD ANIME
-// ============================
-
-
-async function addAnime(){
-
-
-
-let anime={
-
-
-title:
-document.getElementById("animeTitle").value,
-
-
-genre:
-document.getElementById("animeGenre").value,
-
-
-year:
-document.getElementById("animeYear").value,
-
-
-image:
-document.getElementById("animeImage").value,
-
-
-desc:
-document.getElementById("animeDesc").value,
-
-
-category:"Anime",
-
-
-rating:"8.5",
-
-quality:"HD"
-
-
-};
-
-
-
-
-let ref =
-await addDoc(
-
-collection(db,"movies"),
-
-anime
-
-);
-
-
-
-alert(
-"Anime Created ID:\n"+ref.id
-);
-
-
-
-}
-
-
-
-
-
-
-
-
-
 // ============================
 // ADD EPISODE
 // ============================
@@ -679,8 +601,6 @@ window.addTrending = addTrending;
 window.addRecommended = addRecommended;
 
 window.addSeries=addSeries;
-
-window.addAnime=addAnime;
 
 window.addEpisode=addEpisode;
 
