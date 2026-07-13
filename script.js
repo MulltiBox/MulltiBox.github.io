@@ -69,7 +69,7 @@ async function loadMovies() {
         const movie = doc.data();
         movie.id = doc.id;
 
-        console.log(movie);
+        console.log("TITLE:", movie.title, "CATEGORY:", movie.category);
 
         let container;
 
