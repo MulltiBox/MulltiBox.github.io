@@ -141,43 +141,28 @@ body{
 /* NEW MULLTIBOX BUTTON */
 
 
-.mulltibox-btn{
-
-
-display:inline-block;
-
-margin-bottom:25px;
-
-padding:18px 45px;
-
-border-radius:50px;
-
-
-background:
-
-#e53e3e;
-);
-
-
-color:white;
-
-text-decoration:none;
-
-font-weight:800;
-
-font-size:20px;
-
-
-box-shadow:
-
-0 4px 14px 0 rgba(229, 62, 62, 0.4);
-
-transition:.3s;
-
-
+.mulltibox-btn {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    background: #e53e3e;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
+.mulltibox-btn span {
+    font-size: 18px;
+    font-weight: bold;
+}
 
+.mulltibox-btn small {
+    font-size: 12px;
+    margin-top: 3px;
+    opacity: 0.8;
+}
 
 .mulltibox-btn:hover{
 
@@ -593,12 +578,10 @@ transform:translateY(-6px) scale(1.03);
 <!-- MULLTIBOX ACCESS BUTTON -->
 
 
-<a href="themulltibox.html" class="mulltibox-btn">
-
-🚀 Explore MulltiBox
-
-</a>
-
+<button class="explore-btn">
+    <span>Explore Mulltibox</span>
+    <small>The premium | Entertainment</small>
+</button>
 
 
 <div class="search-container">
