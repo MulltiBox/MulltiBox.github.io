@@ -802,4 +802,89 @@ footer{
 
 }
 
+/* =========================
+ FOOTER
+========================= */
+
+
+footer{
+
+
+    background:#080808;
+
+
+    border-top:1px solid #222;
+
+
+    padding:40px 20px;
+
+
+    text-align:center;
+
+
+    color:#aaa;
+
+
+}
+
+
+
+
+footer h2{
+
+
+    color:#e50914;
+
+
+    font-size:32px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+.footer-links{
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+.footer-links a{
+
+
+    color:#aaa;
+
+
+    text-decoration:none;
+
+
+    margin:0 12px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.footer-links a:hover{
+
+
+    color:#e50914;
+
+
+}
+
+
 }
