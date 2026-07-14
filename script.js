@@ -78,16 +78,16 @@ async function loadMovies() {
                 container = document.getElementById("movies-container");
                 break;
 
+            case "Anime":
+                container = document.getElementById("anime-container");
+                break;
+
             case "Series":
-                container = document.getElementById("series-container");
+                container = document.getElementById("seriess-container");
                 break;
 
-            case "Trending":
-                container = document.getElementById("trending-container");
-                break;
-
-            case "Recommended":
-                container = document.getElementById("recommended-container");
+            case "Top":
+                container = document.getElementById("top-container");
                 break;
 
         }
