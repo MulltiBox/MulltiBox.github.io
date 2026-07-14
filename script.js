@@ -83,7 +83,7 @@ async function loadMovies() {
                 break;
 
             case "Series":
-                container = document.getElementById("seriess-container");
+                container = document.getElementById("series-container");
                 break;
 
             case "Top":
