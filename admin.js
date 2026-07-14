@@ -151,10 +151,6 @@ async function uploadVideo(fileInput,statusID){
 async function addTrending(){
 
 
-async function addSeries(){
-
-
-
 let series={
 
 
@@ -207,7 +203,7 @@ alert(
 "Series Created ID:\n"+ref.id
 );
 
-
+}
 
 
 
