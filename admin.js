@@ -210,52 +210,56 @@ alert(
 async function addRecommended(){
 
 
-let data={
+let series={
+
 
 title:
-document.getElementById("recommendedTitle").value,
+document.getElementById("seriesTitle").value,
+
 
 genre:
-document.getElementById("recommendedGenre").value,
+document.getElementById("seriesGenre").value,
+
 
 year:
-document.getElementById("recommendedYear").value,
+document.getElementById("seriesYear").value,
+
 
 image:
-document.getElementById("recommendedImage").value,
+document.getElementById("seriesImage").value,
+
 
 desc:
-document.getElementById("recommendedDesc").value,
+document.getElementById("seriesDesc").value,
 
 
-videoUrl:
-await uploadVideo(
-"recommendedVideo",
-"recommendedUploadStatus"
-),
+category:"Series",
 
-
-category:"Recommended",
 
 rating:"8.5",
 
 quality:"HD"
 
+
 };
 
 
+
+
+let ref =
 await addDoc(
+
 collection(db,"movies"),
-data
+
+series
+
 );
 
 
-alert("Recommended Added Successfully");
 
-showMovies();
-
-}
-
+alert(
+"Series Created ID:\n"+ref.id
+);
 
 
 
